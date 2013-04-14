@@ -1,8 +1,16 @@
 " Vim syntax file
-" Language: ruby rspec
-" Maintainer: Ronny Haryanto
+" Language: Ruby RSpec
+" Maintainer: Ronny Haryanto <ronny@haryan.to>
+" Filenames: *_spec.rb
 
-" Assumes that github.com/vim-ruby/vim-ruby is already loaded.
+if exists("b:current_syntax")
+  finish
+endif
+
+runtime! syntax/ruby.vim
+
 syn keyword rubyRspec describe context it specify it_should_behave_like it_behaves_like before after setup subject its shared_examples_for shared_context let let!
-highlight def link rubyRspec Function
 
+hi def link rubyRspec Function
+
+let b:current_syntax = "rspec"
