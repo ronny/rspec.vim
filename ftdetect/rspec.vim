@@ -1,1 +1,1 @@
-autocmd BufRead,BufNewFile *_spec.rb    set filetype=rspec
+autocmd BufRead,BufNewFile *_spec.rb setf rspec
